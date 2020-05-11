@@ -40,4 +40,13 @@ public class View {
                 JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null,
                 options, options[0]);
     }
+    
+    public static String getInputString(String message){
+        String r = "";
+        try {
+            r = JOptionPane.showInputDialog(message);
+        } catch (Exception e) {
+        }
+        return r;
+    }
 }
