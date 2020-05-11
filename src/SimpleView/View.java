@@ -4,14 +4,14 @@ import javax.swing.JOptionPane;
 
 public class View {
 
-    private static boolean mostrarMensagens = true;
+    private static boolean showMessages = true;
 
     public static void render(String message) {
         render(message, "");
     }
 
     public static void render(String message, String typeMessage) {
-        if (mostrarMensagens) {
+        if (showMessages) {
             int numberType;
             switch (typeMessage) {
                 case "error":
@@ -31,8 +31,8 @@ public class View {
         }
     }
 
-    public static void setMostrarMensagens(boolean mostrarMensagens) {
-        View.mostrarMensagens = mostrarMensagens;
+    public static void setShowMessages(boolean mostrarMensagens) {
+        View.showMessages = mostrarMensagens;
     }
     
     public static int chooseOption(String title,String message,String[] options){
