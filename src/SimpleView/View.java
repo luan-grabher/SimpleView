@@ -34,14 +34,14 @@ public class View {
     public static void setShowMessages(boolean mostrarMensagens) {
         View.showMessages = mostrarMensagens;
     }
-    
-    public static int chooseOption(String title,String message,String[] options){
-        return JOptionPane.showOptionDialog(null, message,title,
+
+    public static int chooseButton(String message, String[] buttons) {
+        return JOptionPane.showOptionDialog(null, message, "Escolha:",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null,
-                options, options[0]);
+                buttons, buttons[0]);
     }
-    
-    public static String getInputString(String message){
+
+    public static String getInputString(String message) {
         String r = "";
         try {
             r = JOptionPane.showInputDialog(message);
