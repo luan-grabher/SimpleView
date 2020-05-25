@@ -142,7 +142,7 @@ public class Loading extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.JProgressBar barra;
-    public static javax.swing.JLabel texto;
+    public javax.swing.JProgressBar barra;
+    public javax.swing.JLabel texto;
     // End of variables declaration//GEN-END:variables
 }
