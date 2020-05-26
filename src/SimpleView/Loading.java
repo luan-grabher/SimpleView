@@ -37,11 +37,11 @@ public class Loading extends javax.swing.JFrame {
         setVisible(true);
     }
 
-    public void update(int valor) {
-        update(valor + " de " + maxValue, valor);
+    public void updateBar(int valor) {
+        updateBar(valor + " de " + maxValue, valor);
     }
     
-    public void update(String descricao, int valor) {
+    public void updateBar(String descricao, int valor) {
         texto.setText(descricao);
         barra.setValue(valor);
     }
