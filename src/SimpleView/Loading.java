@@ -41,6 +41,7 @@ public class Loading extends javax.swing.JFrame {
         updateBar(valor + " de " + maxValue, valor);
     }
     
+    
     public void updateBar(String descricao, int valor) {
         texto.setText(descricao);
         barra.setValue(valor);
