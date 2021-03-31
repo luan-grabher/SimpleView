@@ -10,6 +10,7 @@ package SimpleView;
  * @author TI01
  */
 public class Loading extends javax.swing.JFrame {
+
     private int minValue = 0;
     private int maxValue = 0;
 
@@ -19,16 +20,31 @@ public class Loading extends javax.swing.JFrame {
     public Loading() {
         initComponents();
     }
-    
+
+    /**
+     * Inicia a barra e mostra para o usuario
+     *
+     * @param nome Nome da barra que irá aparecer
+     * @param minValue Valor minimo, por padrao use 0
+     * @param maxValue Valor maximo, valor maximo a ser atingido
+     */
     public Loading(String nome, int minValue, int maxValue) {
         initComponents();
         start(nome, minValue, maxValue);
     }
 
+    /**
+     * Inicia a barra e mostra para o usuario.
+     * ESSE MÉTODO É CHAMADO PELO CONSTRUTOR, NÃO É NECESSARIO CHAMA-LO
+     *
+     * @param nome Nome da barra que irá aparecer
+     * @param minValue Valor minimo, por padrao use 0
+     * @param maxValue Valor maximo, valor maximo a ser atingido
+     */
     public void start(String nome, int minValue, int maxValue) {
         this.maxValue = maxValue;
         this.minValue = minValue;
-        
+
         setTitle(nome);
         texto.setText(nome);
         barra.setMinimum(minValue);
@@ -37,11 +53,29 @@ public class Loading extends javax.swing.JFrame {
         setVisible(true);
     }
 
+    /**
+     * Atualiza o valor da barra para o proximo valor e coloca o texto "VALOR de
+     * VALOR MAXIMO".
+     */
+    public void next() {
+        updateBar(barra.getValue() + 1);
+    }
+
+    /**
+     * Atualiza o valor da barra e coloca o texto "VALOR de VALOR MAXIMO".
+     *
+     * @param valor O valor para atualizar
+     */
     public void updateBar(int valor) {
         updateBar(valor + " de " + maxValue, valor);
     }
-    
-    
+
+    /**
+     * Atualiza o valor da barra e coloca o texto da descrição informada.
+     *
+     * @param descricao Descrição ciom o texto desejado
+     * @param valor O valor para atualizar
+     */
     public void updateBar(String descricao, int valor) {
         texto.setText(descricao);
         barra.setValue(valor);
